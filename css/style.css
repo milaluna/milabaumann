@@ -1,18 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 html {
   min-height: 100vh;
   scroll-behavior: smooth;
+  font-family: sans-serif;
 }
 
 .main-grid-container {
   display: grid;
-  grid-template-columns: [col1-start] 16% [col2-start] auto;
-  grid-template-rows: auto;
+  padding-left: 13%;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 3fr 1fr 1fr 1fr 20vh;
   grid-template-areas:
-    "menu projects";
+    "projects-carousel projects-carousel projects-carousel"
+    "project project project"
+    "project project project"
+    "project project project"
+    "footer footer footer"
 }
 
 .menu {
-  grid-area: menu;
   background-color: white;
   position: fixed;
   left: 0;
@@ -21,21 +31,19 @@ html {
   background-image: url('../images/menuBackground.png');
   background-position: center;
   background-size: cover;
-  grid-column-start: 1;
-  grid-column-end: 2;
-
+  display: block;
+  width: 13%;
 }
 
 .menu ul {
-  display: block;
-  /* width: 100%; */
-  height: 100%;
-  padding-top: 2em;
-  padding-left: 1.8em;
+  padding-top: 3em;
+  padding-left: 1.5em;
+  font-size: 1.25em;
+  width: 100%;
 }
 
 .menu ul::before {
-  content: "From";
+  content: "from";
   font-size: 0.8em;
   color: darkgray;
 }
@@ -61,17 +69,50 @@ html {
   color: darkgray;
 }
 
-.projects {
-  grid-area: projects;
-  background-color: cadetblue;
+.projects-carousel {
+  grid-area: projects-carousel;
+  background-color: white;
 }
 
-.projects p {
-  min-height: 10vh;
-  margin: 20em 0;
+.carousel-item img {
+  height: 80vh;
 }
 
-.invisible-link{
+.carousel-inner {
+  padding-bottom: 20vh;
+}
+
+.carousel-caption {
+  position: absolute;
+  bottom: -17vh;
+  color: black
+}
+
+.img1 {
+  background: url('../images/carousel/img1.png') no-repeat center center fixed;
+  background-size: cover;
+}
+
+.img2 {
+  background: url('../images/carousel/img2.png') no-repeat center center fixed;
+  background-size: cover;
+}
+
+.img3 {
+  background: url('../images/carousel/img3.png') no-repeat center center fixed;
+  background-size: cover;
+}
+
+.project {
+  /* grid-area: project; */
+}
+
+.footer {
+  background-image: linear-gradient(to bottom, #00ADEF, black);
+    grid-area: footer;
+}
+
+.invisible-link {
   text-decoration: none;
   color: inherit;
 }
