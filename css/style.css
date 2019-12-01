@@ -88,13 +88,18 @@ html {
   color: black
 }
 
+.carousel-control-prev,
+.carousel-control-next {
+  padding-bottom: 25vh;
+}
+
 .img1 {
-  background: url('../images/carousel/img1.png') no-repeat center center fixed;
+  background: url('../images/carousel/img1.jpg') no-repeat center center fixed;
   background-size: cover;
 }
 
 .img2 {
-  background: url('../images/carousel/img2.png') no-repeat center center fixed;
+  background: url('../images/carousel/img2.jpg') no-repeat center center fixed;
   background-size: cover;
 }
 
@@ -103,8 +108,21 @@ html {
   background-size: cover;
 }
 
+.carousel-indicators li {
+  background-color: lightgrey;
+}
+
 .project {
   /* grid-area: project; */
+  /* border: 1px solid black; */
+  /* background: #DDD; */
+}
+
+.project img {
+  max-width: 100%;
+  max-height: 100%;
+  margin: auto;
+  padding: auto;
 }
 
 .footer {
