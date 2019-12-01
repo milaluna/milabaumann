@@ -163,20 +163,36 @@ html {
   /* transition: all 0.3s ease-in; */
 }
 
-.project:hover {
-  opacity: 60%;
-  /* visibility: hidden; */
+.project:hover img {
+  opacity: 40%;
 }
 
-.project:hover::after {
+.project:hover .middle{
+  opacity: 100%
+}
+
+.middle{
+  position: absolute;
+  /* transition: .3s ease; */
+  opacity: 0;
+}
+
+.text{
+  /* background-color: white; */
+  color: black;
+  font-size: 1.5rem;
+  padding: 16px 32px;
+}
+
+/* .project:hover::after {
   content: attr(data-hover);
   position: absolute;
   color: orange;
   opacity: 100%;
   font-size: 1.2rem;
-  /* background-color: white */
-    /* visibility: visible; */
-}
+  background-color: white
+    visibility: visible;
+} */
 
 .project img {
   max-width: 100%;
