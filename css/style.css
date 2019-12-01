@@ -203,7 +203,11 @@ html {
 
 .footer {
   /* background-image: linear-gradient(to bottom, white, lightgrey); */
+
   color: white grid-area: footer;
+  display: flex;
+  align-items: center;
+
 }
 
 .invisible-link {
