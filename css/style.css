@@ -1,78 +1,72 @@
 * {
-  margin: 0;
+  margin : 0;
   padding: 0;
 }
 
 html {
-  min-height: 100vh;
+  min-height     : 100vh;
   scroll-behavior: smooth;
-  font-family: sans-serif;
-}
-
-.main-grid-container {
-  display: grid;
-  padding-left: 180px;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 3fr 1fr 1fr 1fr 20vh;
-  grid-template-areas:
-    "projects-carousel projects-carousel projects-carousel"
-    "project project project"
-    "project project project"
-    "project project project"
-    "footer footer footer"
+  font-family    : sans-serif;
 }
 
 .menu {
-  border-right: 1px solid lightgrey;
-  background-color: white;
-  position: fixed;
-  left: 0;
-  min-height: 100vh;
-  max-height: 100vh;
-  background-image: url('../images/menuBackground.png');
+  border-right       : 1px solid lightgrey;
+  background-color   : white;
+  position           : fixed;
+  left               : 0;
+  height             : 100vh;
+  background-image   : url("../images/menuBackground.png");
   background-position: center;
-  background-size: cover;
-  display: block;
-  width: 180px;
+  background-size    : cover;
+  display            : block;
+  width              : 180px;
+  z-index            : 999;
 }
 
 .menu ul {
-  padding-top: 3rem;
+  padding-top : 3rem;
   padding-left: 0.9rem;
-  font-size: 1.25rem;
-  width: 100%;
-}
-
-.menu ul::before {
-  content: "from";
-  font-size: 0.9rem;
-  color: darkgray;
+  font-size   : 1.25rem;
+  width       : 100%;
 }
 
 .menu ul li {
   list-style-type: none;
-  padding-top: 2rem;
+  padding-top    : 2rem;
 }
 
-.menu ul li:nth-child(-n+2)::after {
-  content: "to";
-  display: block;
+.menu ul li:first-child::before {
+  content  : 'from';
+  display  : block;
   font-size: 0.9rem;
-  padding-top: 2rem;
-  color: darkgray;
+  color    : darkgray;
 }
 
-.menu ul li:nth-child(3)::after {
-  content: "by";
-  display: block;
-  font-size: 0.9rem;
+.menu ul li:not(:first-child):not(:last-child)::before {
+  content    : 'to';
+  display    : block;
+  font-size  : 0.9rem;
+  padding-top: 2rem;
+  color      : darkgray;
+}
+
+.menu ul li:last-child::before {
+  content    : 'by';
+  display    : block;
+  font-size  : 0.9rem;
   padding-top: 1.5rem;
-  color: darkgray;
+  color      : darkgray;
+}
+
+.body {
+  padding-left: 180px;
+  display     : block;
+  position    : relative;
 }
 
 .projects-carousel {
-  grid-area: projects-carousel;
   background-color: white;
+  width           : 100%;
 }
 
 .carousel-item img {
@@ -85,66 +79,66 @@ html {
 
 .carousel-caption {
   position: absolute;
-  bottom: -17vh;
-  color: black;
+  bottom  : -17vh;
+  color   : black;
 }
 
 .carousel-caption p {
-  font-size: 1.1rem;
+  font-size : 1.1em;
   font-style: italic;
 }
 
 .carousel-caption h5 {
-  font-size: 2rem;
+  font-size: 2em;
 }
 
-.carousel-control-prev,
-.carousel-control-next {
+.carousel-control-next,
+.carousel-control-prev {
   padding-bottom: 25vh;
 }
 
 .img1 {
-  background: url('../images/carousel/img1.jpg') no-repeat left center fixed;
+  background     : url("../images/carousel/img1.jpg") no-repeat left center fixed;
   background-size: cover;
 }
 
 .img2 {
-  background: url('../images/carousel/img2.jpg') no-repeat center center fixed;
+  background     : url("../images/carousel/img2.jpg") no-repeat center center fixed;
   background-size: cover;
 }
 
 .img3 {
-  background: url('../images/carousel/img3.jpg') no-repeat right center fixed;
+  background     : url("../images/carousel/img3.jpg") no-repeat right center fixed;
   background-size: cover;
 }
 
 .img4 {
-  background: url('../images/carousel/img4.jpg') no-repeat center center fixed;
+  background     : url("../images/carousel/img4.jpg") no-repeat center center fixed;
   background-size: cover;
 }
 
 .img5 {
-  background: url('../images/carousel/img5.jpg') no-repeat left center fixed;
+  background     : url("../images/carousel/img5.jpg") no-repeat left center fixed;
   background-size: cover;
 }
 
 .img6 {
-  background: url('../images/carousel/img6.jpg') no-repeat center center fixed;
+  background     : url("../images/carousel/img6.jpg") no-repeat center center fixed;
   background-size: cover;
 }
 
 .img7 {
-  background: url('../images/carousel/img7.jpg') no-repeat left center fixed;
+  background     : url("../images/carousel/img7.jpg") no-repeat left center fixed;
   background-size: cover;
 }
 
 .img8 {
-  background: url('../images/carousel/img8.png') no-repeat center center fixed;
+  background     : url("../images/carousel/img8.png") no-repeat center center fixed;
   background-size: cover;
 }
 
 .img9 {
-  background: url('../images/carousel/img9.jpg') no-repeat center center fixed;
+  background     : url("../images/carousel/img9.jpg") no-repeat center center fixed;
   background-size: cover;
 }
 
@@ -156,34 +150,52 @@ html {
   background-color: rgb(175, 148, 5);
 }
 
+.projects-display {
+  display       : flex;
+  flex-direction: row;
+  flex-wrap     : wrap;
+  margin-left   : auto;
+  margin-right  : auto;
+  position      : relative;
+  min-height    : 100vh;
+}
+
 .project {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  /* transition: all 0.3s ease-in; */
+  display : inline-block;
+  position: relative;
+  width   : 33%;
+  height  : 33%;
 }
 
 .project:hover img {
   opacity: 40%;
 }
 
-.project:hover .middle{
-  opacity: 100%
+.project:hover .middle {
+  opacity: 100%;
 }
 
-.middle{
-  position: absolute;
+.middle {
+  position       : absolute;
+  display        : flex;
+  top            : 0;
+  left           : 0;
+  right          : 0;
+  bottom         : 0;
   /* transition: .3s ease; */
-  opacity: 0;
+  opacity        : 0;
+  justify-content: center;
+  align-items    : center;
+  text-align     : center;
 }
 
-.text{
+.text {
   /* background-color: white; */
-  color: black;
+  position : relative;
+  color    : black;
   font-size: 1.5rem;
-  padding: 16px 32px;
+  padding  : 16px 32px;
 }
-
 /* .project:hover::after {
   content: attr(data-hover);
   position: absolute;
@@ -193,33 +205,134 @@ html {
   background-color: white
     visibility: visible;
 } */
-
 .project img {
-  max-width: 100%;
+  max-width : 100%;
   max-height: 100%;
-  margin: auto;
-  padding: auto;
+  margin    : auto;
+  padding   : auto;
 }
 
 .footer {
   /* background-image: linear-gradient(to bottom, white, lightgrey); */
-
-  color: white grid-area: footer;
-  display: flex;
-  align-items: center;
-
+  color       : black;
+  display     : block;
+  text-align  : center;
+  padding     : 2vh;
+  font-size   : 1.6em;
+  padding-left: 180px;
 }
 
 .invisible-link {
   text-decoration: none;
-  color: inherit;
+  color          : inherit;
 }
 
 .invisible-link:hover {
   text-decoration: none;
-  color: rgb(175, 148, 5);
+  color          : rgb(175, 148, 5);
 }
 
 .special-hover:hover {
-  color: orange
+  color: orange;
+}
+@media screen and (max-width: 992px) {
+  body {
+    font-size: 3em;
+  }
+
+  .menu-hide {
+    top: -3em !important;
+  }
+
+  .menu {
+    border-right    : none;
+    border-bottom   : 5px solid black;
+    position        : fixed;
+    top             : 0;
+    right           : 0;
+    left            : 0;
+    width           : auto;
+    height          : 3em;
+    overflow-x      : auto;
+    overflow-y      : hidden;
+    z-index         : 9999;
+    -webkit-box-pack: center;
+    justify-content : center;
+    margin-left     : auto;
+    margin-right    : auto;
+    transition      : top 0.2s ease-in-out;
+  }
+
+  .menu ul {
+    white-space    : nowrap;
+    justify-content: space-around;
+    padding-top    : 0;
+    padding-left   : 0.6em;
+    font-size      : 2em;
+    width          : auto;
+  }
+
+  .menu ul::before {
+    display: inline;
+  }
+
+  .menu ul li {
+    display        : inline;
+    list-style-type: none;
+    padding-right  : 1em;
+  }
+
+  .menu ul li:first-child::before {
+    display  : inline;
+    font-size: 0.8em;
+  }
+
+  .menu ul li:not(:first-child):not(:last-child)::before {
+    display  : inline;
+    font-size: 0.8em;
+  }
+
+  .menu ul li:last-child::before {
+    display  : inline;
+    font-size: 0.8em;
+  }
+
+  .body {
+    padding-left: 0;
+  }
+
+  .carousel-item img {
+    height: 70vh;
+  }
+
+  .carousel-inner {
+    padding-bottom: 20vh;
+  }
+
+  .carousel-caption {
+    position: absolute;
+    bottom  : -20vh;
+    color   : black;
+  }
+
+  .carousel-caption p {
+    font-size: 0.8em;
+  }
+
+  .carousel-caption h5 {
+    font-size: 1.5em;
+  }
+
+  .projects-display {
+    min-height: 100vh;
+  }
+
+  .project {
+    width: 100%;
+  }
+
+  .footer {
+    padding-left: 0;
+    font-size   : 0.6em;
+  }
 }
