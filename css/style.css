@@ -9,26 +9,18 @@ html {
   font-family    : sans-serif;
 }
 
-.main-grid-container {
-  display              : grid;
-  padding-left         : 180px;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows   : 3fr 1fr 1fr 1fr 20vh;
-  grid-template-areas  : "projects-carousel projects-carousel projects-carousel" "project project project" "project project project" "project project project" "footer footer footer";
-}
-
 .menu {
   border-right       : 1px solid lightgrey;
   background-color   : white;
   position           : fixed;
   left               : 0;
-  min-height         : 100vh;
-  max-height         : 100vh;
+  height             : 100vh;
   background-image   : url("../images/menuBackground.png");
   background-position: center;
   background-size    : cover;
   display            : block;
   width              : 180px;
+  z-index            : 999;
 }
 
 .menu ul {
@@ -38,36 +30,43 @@ html {
   width       : 100%;
 }
 
-.menu ul::before {
-  content  : "from";
-  font-size: 0.9rem;
-  color    : darkgray;
-}
-
 .menu ul li {
   list-style-type: none;
   padding-top    : 2rem;
 }
 
-.menu ul li:nth-child(-n+2)::after {
-  content    : "to";
+.menu ul li:first-child::before {
+  content  : 'from';
+  display  : block;
+  font-size: 0.9rem;
+  color    : darkgray;
+}
+
+.menu ul li:not(:first-child):not(:last-child)::before {
+  content    : 'to';
   display    : block;
   font-size  : 0.9rem;
   padding-top: 2rem;
   color      : darkgray;
 }
 
-.menu ul li:nth-child(3)::after {
-  content    : "by";
+.menu ul li:last-child::before {
+  content    : 'by';
   display    : block;
   font-size  : 0.9rem;
   padding-top: 1.5rem;
   color      : darkgray;
 }
 
+.body {
+  padding-left: 180px;
+  display     : block;
+  position    : relative;
+}
+
 .projects-carousel {
-  grid-area       : projects-carousel;
   background-color: white;
+  width           : 100%;
 }
 
 .carousel-item img {
@@ -85,12 +84,12 @@ html {
 }
 
 .carousel-caption p {
-  font-size : 1.1rem;
+  font-size : 1.1em;
   font-style: italic;
 }
 
 .carousel-caption h5 {
-  font-size: 2rem;
+  font-size: 2em;
 }
 
 .carousel-control-next,
@@ -151,11 +150,21 @@ html {
   background-color: rgb(175, 148, 5);
 }
 
+.projects-display {
+  display       : flex;
+  flex-direction: row;
+  flex-wrap     : wrap;
+  margin-left   : auto;
+  margin-right  : auto;
+  position      : relative;
+  min-height    : 100vh;
+}
+
 .project {
-  display        : flex;
-  justify-content: center;
-  align-items    : center;
-  /* transition: all 0.3s ease-in; */
+  display : inline-block;
+  position: relative;
+  width   : 33%;
+  height  : 33%;
 }
 
 .project:hover img {
@@ -167,13 +176,22 @@ html {
 }
 
 .middle {
-  position: absolute;
+  position       : absolute;
+  display        : flex;
+  top            : 0;
+  left           : 0;
+  right          : 0;
+  bottom         : 0;
   /* transition: .3s ease; */
-  opacity : 0;
+  opacity        : 0;
+  justify-content: center;
+  align-items    : center;
+  text-align     : center;
 }
 
 .text {
   /* background-color: white; */
+  position : relative;
   color    : black;
   font-size: 1.5rem;
   padding  : 16px 32px;
@@ -196,9 +214,12 @@ html {
 
 .footer {
   /* background-image: linear-gradient(to bottom, white, lightgrey); */
-  color          :white grid-area: footer;
-  display        : flex;
-  align-items    : center;
+  color       : black;
+  display     : block;
+  text-align  : center;
+  padding     : 2vh;
+  font-size   : 1.6em;
+  padding-left: 180px;
 }
 
 .invisible-link {
@@ -213,4 +234,105 @@ html {
 
 .special-hover:hover {
   color: orange;
+}
+@media screen and (max-width: 992px) {
+  body {
+    font-size: 3em;
+  }
+
+  .menu-hide {
+    top: -3em !important;
+  }
+
+  .menu {
+    border-right    : none;
+    border-bottom   : 5px solid black;
+    position        : fixed;
+    top             : 0;
+    right           : 0;
+    left            : 0;
+    width           : auto;
+    height          : 3em;
+    overflow-x      : auto;
+    overflow-y      : hidden;
+    z-index         : 9999;
+    -webkit-box-pack: center;
+    justify-content : center;
+    margin-left     : auto;
+    margin-right    : auto;
+    transition      : top 0.2s ease-in-out;
+  }
+
+  .menu ul {
+    white-space    : nowrap;
+    justify-content: space-around;
+    padding-top    : 0;
+    padding-left   : 0.6em;
+    font-size      : 2em;
+    width          : auto;
+  }
+
+  .menu ul::before {
+    display: inline;
+  }
+
+  .menu ul li {
+    display        : inline;
+    list-style-type: none;
+    padding-right  : 1em;
+  }
+
+  .menu ul li:first-child::before {
+    display  : inline;
+    font-size: 0.8em;
+  }
+
+  .menu ul li:not(:first-child):not(:last-child)::before {
+    display  : inline;
+    font-size: 0.8em;
+  }
+
+  .menu ul li:last-child::before {
+    display  : inline;
+    font-size: 0.8em;
+  }
+
+  .body {
+    padding-left: 0;
+  }
+
+  .carousel-item img {
+    height: 70vh;
+  }
+
+  .carousel-inner {
+    padding-bottom: 20vh;
+  }
+
+  .carousel-caption {
+    position: absolute;
+    bottom  : -20vh;
+    color   : black;
+  }
+
+  .carousel-caption p {
+    font-size: 0.8em;
+  }
+
+  .carousel-caption h5 {
+    font-size: 1.5em;
+  }
+
+  .projects-display {
+    min-height: 100vh;
+  }
+
+  .project {
+    width: 100%;
+  }
+
+  .footer {
+    padding-left: 0;
+    font-size   : 0.6em;
+  }
 }
