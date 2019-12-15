@@ -47,3 +47,22 @@ function hasScrolled() {
 
   lastScrollTop = st;
 }
+
+// function padd(c) {
+//   let hex = Number(c).toString(16);
+//   while (hex.length < 6) {
+//     hex = "0" + hex;
+//   }
+//
+//   return hex;
+// }
+// var c = 0;
+//
+// setInterval(() => {
+//   $("#menu").css('background-color', `#${padd(c)}`);
+//   if (c < 0xFFFFFF) {
+//     c += 1;
+//   } else {
+//     c = 0;
+//   }
+// }, 1);

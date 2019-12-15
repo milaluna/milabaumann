@@ -9,9 +9,23 @@ html {
   font-family    : sans-serif;
 }
 
+.invisible-link {
+  text-decoration: none;
+  color          : inherit;
+}
+
+.invisible-link:hover {
+  text-decoration: none;
+  color          : rgb(175, 148, 5);
+}
+
+.special-hover:hover {
+  color: orange;
+}
+
 .menu {
   border-right       : 1px solid lightgrey;
-  background-color   : white;
+  background-color   : #e6e6e6;
   position           : fixed;
   left               : 0;
   height             : 100vh;
@@ -63,14 +77,25 @@ html {
   display     : block;
   position    : relative;
 }
+/* text */
+.title {
+  font-size: 2rem;
+}
 
+.quote {
+  font-size : 1.3rem;
+  font-style: italic;
+}
+/* carousel */
 .projects-carousel {
   background-color: white;
   width           : 100%;
 }
 
 .carousel-item img {
-  height: 80vh;
+  height       : 80vh;
+  -o-object-fit: cover;
+  object-fit   : cover;
 }
 
 .carousel-inner {
@@ -83,63 +108,9 @@ html {
   color   : black;
 }
 
-.carousel-caption p {
-  font-size : 1.1em;
-  font-style: italic;
-}
-
-.carousel-caption h5 {
-  font-size: 2em;
-}
-
 .carousel-control-next,
 .carousel-control-prev {
   padding-bottom: 25vh;
-}
-
-.img1 {
-  background     : url("../images/carousel/img1.jpg") no-repeat left center fixed;
-  background-size: cover;
-}
-
-.img2 {
-  background     : url("../images/carousel/img2.jpg") no-repeat center center fixed;
-  background-size: cover;
-}
-
-.img3 {
-  background     : url("../images/carousel/img3.jpg") no-repeat right center fixed;
-  background-size: cover;
-}
-
-.img4 {
-  background     : url("../images/carousel/img4.jpg") no-repeat center center fixed;
-  background-size: cover;
-}
-
-.img5 {
-  background     : url("../images/carousel/img5.jpg") no-repeat left center fixed;
-  background-size: cover;
-}
-
-.img6 {
-  background     : url("../images/carousel/img6.jpg") no-repeat center center fixed;
-  background-size: cover;
-}
-
-.img7 {
-  background     : url("../images/carousel/img7.jpg") no-repeat left center fixed;
-  background-size: cover;
-}
-
-.img8 {
-  background     : url("../images/carousel/img8.png") no-repeat center center fixed;
-  background-size: cover;
-}
-
-.img9 {
-  background     : url("../images/carousel/img9.jpg") no-repeat center center fixed;
-  background-size: cover;
 }
 
 .carousel-indicators li {
@@ -149,15 +120,21 @@ html {
 .carousel-indicators li:hover {
   background-color: rgb(175, 148, 5);
 }
-
+/* Project menu */
 .projects-display {
-  display       : flex;
-  flex-direction: row;
-  flex-wrap     : wrap;
-  margin-left   : auto;
-  margin-right  : auto;
-  position      : relative;
-  min-height    : 100vh;
+  display              : -webkit-box;
+  display              : -ms-flexbox;
+  display              : flex;
+  -webkit-box-orient   : horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction   : row;
+  flex-direction       : row;
+  -ms-flex-wrap        : wrap;
+  flex-wrap            : wrap;
+  margin-left          : auto;
+  margin-right         : auto;
+  position             : relative;
+  min-height           : 100vh;
 }
 
 .project {
@@ -176,17 +153,23 @@ html {
 }
 
 .middle {
-  position       : absolute;
-  display        : flex;
-  top            : 0;
-  left           : 0;
-  right          : 0;
-  bottom         : 0;
+  position         : absolute;
+  display          : -webkit-box;
+  display          : -ms-flexbox;
+  display          : flex;
+  top              : 0;
+  left             : 0;
+  right            : 0;
+  bottom           : 0;
   /* transition: .3s ease; */
-  opacity        : 0;
-  justify-content: center;
-  align-items    : center;
-  text-align     : center;
+  opacity          : 0;
+  -webkit-box-pack : center;
+  -ms-flex-pack    : center;
+  justify-content  : center;
+  -webkit-box-align: center;
+  -ms-flex-align   : center;
+  align-items      : center;
+  text-align       : center;
 }
 
 .text {
@@ -221,20 +204,6 @@ html {
   font-size   : 1.6em;
   padding-left: 180px;
 }
-
-.invisible-link {
-  text-decoration: none;
-  color          : inherit;
-}
-
-.invisible-link:hover {
-  text-decoration: none;
-  color          : rgb(175, 148, 5);
-}
-
-.special-hover:hover {
-  color: orange;
-}
 @media screen and (max-width: 992px) {
   body {
     font-size: 3em;
@@ -245,26 +214,29 @@ html {
   }
 
   .menu {
-    border-right    : none;
-    border-bottom   : 5px solid black;
-    position        : fixed;
-    top             : 0;
-    right           : 0;
-    left            : 0;
-    width           : auto;
-    height          : 3em;
-    overflow-x      : auto;
-    overflow-y      : hidden;
-    z-index         : 9999;
-    -webkit-box-pack: center;
-    justify-content : center;
-    margin-left     : auto;
-    margin-right    : auto;
-    transition      : top 0.2s ease-in-out;
+    border-right      : none;
+    border-bottom     : 5px solid black;
+    position          : fixed;
+    top               : 0;
+    right             : 0;
+    left              : 0;
+    width             : auto;
+    height            : 3em;
+    overflow-x        : auto;
+    overflow-y        : hidden;
+    z-index           : 9999;
+    -webkit-box-pack  : center;
+    -ms-flex-pack     : center;
+    justify-content   : center;
+    margin-left       : auto;
+    margin-right      : auto;
+    -webkit-transition: top 0.2s ease-in-out;
+    transition        : top 0.2s ease-in-out;
   }
 
   .menu ul {
     white-space    : nowrap;
+    -ms-flex-pack  : distribute;
     justify-content: space-around;
     padding-top    : 0;
     padding-left   : 0.6em;

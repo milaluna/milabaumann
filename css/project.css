@@ -1,25 +1,45 @@
-.project-grid-container {
-  padding-left         : 180px;
-  display              : grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows   : 3fr 1fr 1fr 1fr 20vh;
-}
-
 .project-introduction {
-  max-height: 100vh;
+  min-height: 100vh;
   display   : block;
 }
 
+.title-subtitle {
+  height    : 20vh;
+  padding   : 6vh 0;
+  text-align: center;
+}
+
 .main-image {
-  display: flex;
-  height : 70%;
+  padding      : auto;
+  /* text-align: center; */
+  width        : 100%;
+  height       : 80vh;
+  -o-object-fit: cover;
+  object-fit   : cover;
 }
 
-.title {
-  font-size: 2rem;
+.project-description {
+  width      : 100%;
+  padding    : 5vh;
+  display    : flex;
+  align-items: top;
+  height     : 100vh;
+  /* margin-top : 15vh; */
 }
 
-.quote {
-  font-size : 1.1rem;
-  font-style: italic;
+.image {
+  width: 50%;
+}
+
+.main-text {
+  width      : 50%;
+  padding-top: 0;
+  font-size  : 1.1rem;
+  margin-left: 5vh;
+  margin-top : -5px;
+}
+
+.image img {
+  object-fit: cover;
+  width     : 100%;
 }
