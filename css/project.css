@@ -1,0 +1,25 @@
+.project-grid-container {
+  padding-left         : 180px;
+  display              : grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows   : 3fr 1fr 1fr 1fr 20vh;
+}
+
+.project-introduction {
+  max-height: 100vh;
+  display   : block;
+}
+
+.main-image {
+  display: flex;
+  height : 70%;
+}
+
+.title {
+  font-size: 2rem;
+}
+
+.quote {
+  font-size : 1.1rem;
+  font-style: italic;
+}
