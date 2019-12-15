@@ -83,7 +83,7 @@ html {
 }
 
 .quote {
-  font-size : 1.3rem;
+  font-size : 1.1rem;
   font-style: italic;
 }
 /* carousel */
@@ -205,11 +205,8 @@ html {
   padding-left: 180px;
 }
 @media screen and (max-width: 992px) {
-  body {
-    font-size: 3em;
-  }
-
-  .menu-hide {
+  body {}
+  /* .menu-hide {
     top: -3em !important;
   }
 
@@ -306,5 +303,5 @@ html {
   .footer {
     padding-left: 0;
     font-size   : 0.6em;
-  }
+  } */
 }

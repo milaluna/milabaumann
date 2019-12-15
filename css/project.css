@@ -32,14 +32,29 @@
 }
 
 .main-text {
-  width      : 50%;
-  padding-top: 0;
-  font-size  : 1.1rem;
-  margin-left: 5vh;
-  margin-top : -5px;
+  width       : 50%;
+  padding-top : 0;
+  font-size   : 1.1rem;
+  padding-left: 5vh;
+  padding-top : -5px;
 }
 
 .image img {
   object-fit: cover;
   width     : 100%;
+}
+@media screen and (max-width: 992px) {
+  .project-description {
+    display: block;
+  }
+
+  .image {
+    width  : 100%;
+    padding: 0 5vh;
+  }
+
+  .main-text {
+    width  : 100%;
+    padding: 5vh;
+  }
 }
