@@ -86,6 +86,14 @@ html {
   font-size : 1.1rem;
   font-style: italic;
 }
+
+.text {
+  /* background-color: white; */
+  position : relative;
+  color    : black;
+  font-size: 1.5rem;
+  padding  : 16px 32px;
+}
 /* carousel */
 .projects-carousel {
   background-color: white;
@@ -171,14 +179,6 @@ html {
   align-items      : center;
   text-align       : center;
 }
-
-.text {
-  /* background-color: white; */
-  position : relative;
-  color    : black;
-  font-size: 1.5rem;
-  padding  : 16px 32px;
-}
 /* .project:hover::after {
   content: attr(data-hover);
   position: absolute;
@@ -206,6 +206,18 @@ html {
 }
 @media screen and (max-width: 992px) {
   body {}
+
+  .title {
+    font-size: 2.3rem;
+  }
+
+  .quote {
+    font-size: 1.5rem;
+  }
+
+  .menu ul {
+    font-size: 1.9rarem;
+  }
   /* .menu-hide {
     top: -3em !important;
   }
