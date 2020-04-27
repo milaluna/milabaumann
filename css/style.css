@@ -23,6 +23,14 @@ html {
   color: orange;
 }
 
+.object-position-bottom {
+  object-position: bottom;
+}
+
+.object-position-left {
+  object-position: left;
+}
+
 .menu {
   border-right       : 1px solid lightgrey;
   background-color   : #e6e6e6;
@@ -127,7 +135,7 @@ html {
   object-fit   : cover;
 }
 
-.carousel-inner {
+.carousel-inner-index {
   padding-bottom: 20vh;
 }
 
@@ -137,9 +145,8 @@ html {
   color   : black;
 }
 
-.carousel-control-next,
-.carousel-control-prev {
-  padding-bottom: 25vh;
+.carousel-control-next {
+  z-index: 9;
 }
 
 .carousel-indicators li {
