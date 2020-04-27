@@ -1,68 +1,25 @@
-let didScroll;
-var lastScrollTop = 0;
-var delta = 2;
-var navbarHeight = $('#menu')
-  .outerHeight();
+const burger = document.querySelector('.burger');
+const nav = document.querySelector('.menu');
+const navLinks = document.querySelectorAll('.nav-links li');
 
-
-// on scroll, let the interval function know the user has scrolled
-$(window)
-  .scroll(function(event) {
-    didScroll = true;
-  });
-
-// run hasScrolled() and reset didScroll status
-setInterval(function() {
-  if (didScroll) {
-    hasScrolled();
-    didScroll = false;
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!(event.target.classList.contains('burger') || event.target.parentNode.classList.contains('burger')) && nav.classList.contains('nav-active')) { //nav.classList.contains('nav-active') &&
+    burger.click();
   }
-}, 250);
-
-function hasScrolled() {
-  var st = $(this)
-    .scrollTop();
-
-  if (Math.abs(lastScrollTop - st) <= delta) {
-    return;
-  }
-
-  // If current position > last position AND scrolled past navbar...
-  if (st > lastScrollTop && st > navbarHeight) {
-    // Scroll Down
-    $('#menu')
-      .removeClass('menu-show')
-      .addClass('menu-hide');
-  } else {
-    // Scroll Up
-    // If did not scroll past the document (possible on mac)...
-    if (st + $(window)
-      .height() < $(document)
-      .height()) {
-      $('#menu')
-        .removeClass('menu-hide')
-        .addClass('menu-show');
-    }
-  }
-
-  lastScrollTop = st;
 }
 
-// function padd(c) {
-//   let hex = Number(c).toString(16);
-//   while (hex.length < 6) {
-//     hex = "0" + hex;
-//   }
-//
-//   return hex;
-// }
-// var c = 0;
-//
-// setInterval(() => {
-//   $("#menu").css('background-color', `#${padd(c)}`);
-//   if (c < 0xFFFFFF) {
-//     c += 1;
-//   } else {
-//     c = 0;
-//   }
-// }, 1);
+burger.addEventListener('click', () => {
+  //Toggle nav
+  nav.classList.toggle('menu-active');
+  //Animate links
+  navLinks.forEach((link, index) => {
+    if (link.style.animation) {
+      link.style.animation = '';
+    } else {
+      link.style.animation = `navLinkFade 0.3s ease forwards ${index / 7 + 0.2}s`;
+    }
+  });
+  //Burger animation
+  burger.classList.toggle('toggle');
+});
