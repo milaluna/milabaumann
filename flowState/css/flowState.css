@@ -61,7 +61,18 @@ main p {
   height: 100vh;
 }
 
+.border-darker {
+  border: 2px solid black;
+  border-radius: 20px;
+}
 
+.bg-info-alpha {
+  background-color: #17a2b820;
+}
+
+/* Goal end */
+
+/* Movies */
 .movies {
   height: 100vh;
   background-color: black;
@@ -71,8 +82,7 @@ main p {
   color: white;
 }
 
-/* Goal end */
-
+/* Movies end */
 /* Collection of movements */
 
 .collection-of-movements {
