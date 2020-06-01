@@ -17,6 +17,10 @@ body {
   overflow: hidden;
   background-color: white;
 }
+
+.bg-color-change {
+  background-color: white;
+}
 /* Introduction */
 
 .introduction {
@@ -85,22 +89,15 @@ main p {
   padding: 2rem 3rem;
 }
 
-.viewer {
-  background: red;
-}
-
 .movie {
-  background: blueviolet;
   padding: 2rem;
 }
 
 .movie-text {
   color: white;
-  background: darkblue;
 }
 
 .movie-caroussel {
-  background: darkgoldenrod;
   padding-top: 2rem;
   padding-bottom: 2rem;
 }
@@ -110,6 +107,10 @@ main p {
 
 .collection-of-movements {
   height: 100vh;
+}
+
+.com-title {
+  opacity: 0;
 }
 
 /* Collection of movements end */

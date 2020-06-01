@@ -42,7 +42,7 @@
     </header>
     <main class="card">
       <!-- GOAL -->
-      <section id="goal" class="goal text-center pt-4">
+      <section id="goal" class="goal text-center pt-4 bg-color-change">
         <div class="w-50 text-center mx-auto">
           <img src="images/FlowStateManifesto.png" alt="Flow State goal"
             class="w-100 border border-dark bg-info-alpha mb-4" />
@@ -70,12 +70,16 @@
       </section>
       <!-- <hr class="gray-divisor m-0 p-0" /> -->
       <!-- MOVIES -->
-      <section id="movies" class="movies d-flex flex-column justify-content-center align-items-center">
+      <section id="movies" class="movies d-flex flex-column justify-content-around align-items-center bg-color-change">
         <div id="movie-viewer" class="viewer d-flex justify-content-center align-items-center">
-          <div class="movie d-flex justify-content-center align-items-center ">
-            <img src="https://via.placeholder.com/840x420" alt="" />
+          <div class="movie w-75 d-flex justify-content-center align-items-center ">
+            <!-- <img src="https://via.placeholder.com/840x420" alt="" /> -->
+            <video autoplay loop muted width="100%">
+              <source src="./videos/teaser.mp4" type="video/mp4" />
+              Sorry, your browser doesn't support embedded videos.
+            </video>
           </div>
-          <div class="movie-text pr-4">
+          <div class="movie-text w-25 pr-4">
             <h2>The manifest</h2>
             <p>
               Flow State started with the question, how can I create an environment that reacts to the movements of the
@@ -105,8 +109,8 @@
       <!-- Movies end -->
       <!-- <hr class="gray-divisor m-0 p-0" /> -->
       <!-- Collection of movements -->
-      <section id="collection-of-movements" class="collection-of-movements pt-4">
-        <h3 class="text-center">The <strong>C</strong>ollection of <strong>M</strong>ovements</h3>
+      <section id="collection-of-movements" class="collection-of-movements pt-4 bg-color-change">
+        <h3 class="text-center com-title">The <strong>C</strong>ollection of <strong>M</strong>ovements</h3>
       </section>
     </main>
   </div>
