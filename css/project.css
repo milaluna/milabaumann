@@ -40,6 +40,13 @@
   padding-top : -5px;
 }
 
+.carousel-caption {
+  font-size: 1.1rem;
+  bottom   : -10vh;
+}
+/* .carousel-inner {
+  padding-bottom: 12vh;
+} */
 .image img {
   object-fit: cover;
   width     : 100%;
