@@ -8,29 +8,10 @@ $(document).ready(() => {
     arrows: false
   });
 
-  //effect to smootly transition screen to black when arriving to #movies
-  //and then back to white when leaving #movies
-  $(document).scroll(() => {
-    const goalOffset = $('#goal-title').offset().top;
-    const moviesOffset = $('#movies').offset().top;
-    const movieCarousselOffset = $('#movie-caroussel').offset().top;
-    const collectionOfMovementsOffset = $('#collection-of-movements').offset().top;
-    const pos = $(document).scrollTop();
-    let newBg = 255;
-    if (pos >= goalOffset && pos <= moviesOffset) {
-      newBg = 255 - ((pos - goalOffset) / (moviesOffset - goalOffset)) * 255;
-    } else if (pos > moviesOffset && pos < movieCarousselOffset) {
-      newBg = 0;
-    } else if (pos >= movieCarousselOffset && pos < collectionOfMovementsOffset) {
-      newBg = ((pos - movieCarousselOffset) / (collectionOfMovementsOffset - movieCarousselOffset)) * 255;
-      $('.com-title').css('opacity', newBg / 255); //code is shorted, but we just need a number that goes from 0 to 1
-    }
-    $('.bg-color-change').css('background-color', `rgb(${newBg},${newBg},${newBg})`);
-  });
-
   //sync vimeo video play with timeline animation
   const flyinghHigherAndHigher = new TimeLinePlayer('flying-higher-and-higher');
   const exchange = new TimeLinePlayer('exchange');
+  const alive = new TimeLinePlayer('alive');
 });
 
 class TimeLinePlayer {

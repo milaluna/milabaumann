@@ -2,9 +2,9 @@ body {
   margin     : 0;
   padding    : 0;
   box-sizing : border-box;
-  font-family: 'PT Sans', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-size  : 14px;
-  font-weight: lighter;
+  font-weight: 300;
 }
 
 .card-container {
@@ -27,35 +27,24 @@ body {
   height: 100vh;
 }
 
+.teaser {
+  text-align: center;
+}
+
 .title {
-  position      : absolute;
-  top           : -0.632em;
-  right         : 20px;
   text-transform: capitalize;
   font-weight   : bold;
   font-size     : 6.5em;
+  text-align    : left;
 }
 
 .subtitle {
   font-weight: bold;
   font-style : italic;
   font-size  : 2em;
-}
-
-.performed-by p {
-  font-weight: bold;
-  font-size  : 1.2em;
-  margin     : 0;
-  padding    : 0;
-}
-
-.performed-by ul {
-  padding-left: 2em;
-}
-
-.performed-by li {
-  list-style: none;
-  text-align: right;
+  text-align : left;
+  position   : relative;
+  left       : 13em;
 }
 /* Introduction end */
 main p {
@@ -69,6 +58,14 @@ main p {
   background-image: linear-gradient(to bottom, #fff 0%, #fff 25%, #bbb, #888, #444, #000);
   border          : none;
 }
+/* movie */
+#movie {
+  min-height     : 100vh;
+  display        : flex;
+  justify-content: center;
+  align-items    : center;
+}
+/* movie end */
 /* Goal */
 .goal {
   min-height: 100vh;
