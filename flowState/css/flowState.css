@@ -99,6 +99,7 @@ main p {
   display: inline-block;
   position: relative;
   margin: 0;
+  margin-right: -3.5px;
   border: 1px solid dodgerblue;
 }
 
