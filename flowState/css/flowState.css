@@ -123,6 +123,10 @@ main p {
   margin-top: 20vh;
 }
 
+.pr-n {
+  padding-right: 12rem;
+}
+
 .timeline-container {
   position: relative;
   height: 160px;
