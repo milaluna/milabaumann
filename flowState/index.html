@@ -1,244 +1,298 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 
-<head>
-  <meta charset="utf-8" />
-  <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
-  </script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
-  </script>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&family=Roboto:wght@300&display=swap" rel="stylesheet">
-  <script src="https://player.vimeo.com/api/player.js"></script>
-  <script type="text/javascript" src="../libraries/slick/slick.min.js"></script>
-  <script type="text/javascript" src="js/index.js"></script>
-  <link rel="stylesheet" type="text/css" href="../libraries/slick/slick.css" />
-  <link rel="stylesheet" type="text/css" href="../libraries/slick/slick-theme.css" />
-  <link rel="stylesheet" href="css/flowState.css" />
-  <link rel="shortcut icon" type="image/png" href="../images/paraaf.png" />
-  <title>Flow state</title>
-</head>
+  <head>
+    <meta charset="utf-8" />
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+            integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous">
+            </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+            integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+            crossorigin="anonymous">
+            </script>
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+          crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&family=Roboto:wght@300&display=swap"
+          rel="stylesheet">
+    <script src="https://player.vimeo.com/api/player.js"></script>
+    <script type="text/javascript" src="../libraries/slick/slick.min.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <link rel="stylesheet" type="text/css" href="../libraries/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="../libraries/slick/slick-theme.css" />
+    <link rel="stylesheet" href="css/flowState.css" />
+    <link rel="shortcut icon" type="image/png" href="../images/paraaf.png" />
+    <title>Flow state</title>
+  </head>
 
-<body>
-  <div class="card-container">
-    <!-- INTRODUCTION -->
-    <header id="header" class="card introduction w-100 d-flex justify-content-center align-items-center mb-5">
-      <div class="teaser w-75 position-relative">
-        <h1 class="title text-bold">flow state</h1>
-        <div class="subtitle">
-          <p>Mila Baumann</p>
+  <body>
+    <container-fluid class="card-container">
+      <!-- INTRODUCTION -->
+      <header id="header"
+              class="card introduction w-100 d-flex justify-content-center align-items-center mb-5">
+        <div class="teaser w-75 position-relative">
+          <h1 class="title text-bold">flow state</h1>
+          <div class="subtitle">
+            <p>Mila Baumann</p>
+          </div>
         </div>
+      </header>
+      <main class="card">
+        <section id="movie">
+          <iframe src="https://player.vimeo.com/video/428854833" width="960" height="540"
+                  frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+        </section>
+        <!-- GOAL -->
+        <section id="goal" class="goal pt-4 bg-color-change">
+
+          <div id="goal-text" class="container-fluid">
+            <div class="row">
+              <div class="col-6">
+                <p class="font-weight-bold" id="goal-title">
+                  An exploration of the body-mind relationship
+                </p>
+                <p>
+                  The separate sense of self is an illusion created by language. While language
+                  defines
+                  things
+                  by separating them from their context, we exist through our context. We can exist
+                  without
+                  the definition we give ourselves through language, but we can’t exist without the
+                  relationship
+                  between our body, our mind and our surroundings.
+                </p>
+              </div>
+            </div>
+            <div class="row">
+              <div id="comic1" class="col-3">
+                <img src="images/goalComics/manifestComicsAsset1.png" alt="Flow State goal"
+                     class="w-100 mb-4" />
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-6"></div>
+              <div id="comic2" class="col-3">
+                <img src="images/goalComics/manifestComicsAsset2.png" alt="Flow State goal"
+                     class="w-100 mb-4" />
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-6"></div>
+              <p class="col-6">
+                Language isn’t fit to explain everything, but it is the best way to communicate.
+              </p>
+            </div>
+            <div class="row">
+              <div class="col-3"></div>
+              <div id="comic3" class="col-3">
+                <img src="images/goalComics/manifestComicsAsset3.png" alt="Flow State goal"
+                     class="w-100 mb-4" />
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-9"></div>
+              <div id="comic4" class="col-3">
+                <img src="images/goalComics/manifestComicsAsset4.png" alt="Flow State goal"
+                     class="w-100 mb-4" />
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-6"></div>
+              <p class="col-6">
+                As a rational being I want to understand the relationship between body, mind and
+                surroundings.
+                As a social being I want to discuss it and share my knowledge. Even though we can
+                never understand
+                it through language alone.
+              </p>
+            </div>
+            <div id="text4" class="row">
+              <p class="col-6">
+                To discuss the relationship between body, mind and surroundings design becomes
+                the complimentary part to language. With Flow State I start this discussion.
+              </p>
+            </div>
+            <div class="row">
+              <div id="comic5" class="col-6">
+                <img src="images/goalComics/manifestComicsAsset5.png" alt="Flow State goal"
+                     class="w-100 mb-4" />
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-6"></div>
+              <div id="comic6" class="col-6">
+                <img src="images/goalComics/manifestComicsAsset6.png" alt="Flow State goal"
+                     class="w-100 mb-4" />
+              </div>
+            </div>
+            <div id="text5" class="row">
+              <div class="col-6"></div>
+              <p class="col-6">
+                Let's explore the body-mind relationship together
+                and use design as our primary way of communicating.
+              </p>
+            </div>
+            <div class="row">
+              <ddiv class="col-3"></ddiv>
+              <p id="text6" class="col-6">
+                Want to see me struggle to explain the body-mind relationship in words?
+                Request acces to my thesis by sending me an email: milaluna.baumann@gmail.com
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Collection of movements -->
+        <section id="collection-of-movements" class="collection-of-movements pt-4">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-6">
+                <p class="font-weight-bold" id="goal-title">
+                  Collection of Movements: A research becomes a method
+                </p>
+                <p>
+                  My journey starts with my personal experiences in circus training.
+                  There I first encounter a state where my body, mind and surroundings seem to
+                  become
+                  separate characters. Instead of me being the one that thinks, or the one that
+                  moves,
+                  I was the place where the three of them came together. Partly leading their
+                  interaction with each other and partly following their flow.
+                </p>
+                <p>
+                  In my research I look to create a similar experience. As a result I made the
+                  Collection
+                  of Movements. A method that allows you to make endless connections between
+                  movements
+                  of
+                  the body, movements of my installation and different points in space. The
+                  resulting
+                  behaviour makes the installation come alive.
+                </p>
+              </div>
+            </div>
+          </div>
+          <article id="alive" class="movement">
+            <div class="container-fluid">
+              <div class="row mb-3">
+                <div class="col-6">
+                  <div class="row no-gutters">
+                    <div class="col-12">
+                      <p class="font-weight-bold">
+                        Alive
+                      </p>
+                    </div>
+                    <div class="row">
+                      <div class="col-6">
+                        <img class="w-100" src="images/collectionOfMovements/alive-text.png" alt="">
+                      </div>
+                      <div class="col-6">
+                        <img class="w-100" src="images/collectionOfMovements/alive-infographic.png"
+                             alt="">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="timeline-video video-player col-6">
+                  <iframe data-target="timeline-alive" class="timeline-video"
+                          src="https://player.vimeo.com/video/429047717" width="640" height="480"
+                          frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12 position-relative timeline-display">
+                  <div class="w-100 timeline-container">
+                    <div id="timeline-alive" class="time"></div>
+                    <img class="w-100" src="images/collectionOfMovements/alive-timeline.png" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article id="flying-higher-and-higher" class="movement">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-6">
+                  <div class="row no-gutters">
+                    <div class="col-12">
+                      <p class="font-weight-bold">
+                        Flying higher and higher
+                      </p>
+                    </div>
+                    <div class="row">
+                      <div class="col-6">
+                        <img class="w-100" src="images/collectionOfMovements/flying-text.png"
+                             alt="">
+                      </div>
+                      <div class="col-6">
+                        <img class="w-100" src="images/collectionOfMovements/flying-infographic.png"
+                             alt="">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 timeline-video video-player">
+                  <iframe data-target="timeline-flying-higher-and-higher" class="timeline-video"
+                          src="https://player.vimeo.com/video/428962181" width="640" height="480"
+                          frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12 position-relative timeline-display">
+                <div class="w-100 timeline-container">
+                  <div id="timeline-flying-higher-and-higher" class="time"></div>
+                  <img class="w-100" src="images/collectionOfMovements/flying-timeline.png" alt="">
+                </div>
+              </div>
+            </div>
+          </article>
+          <article id="exchange" class="movement">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-6">
+                  <div class="row no-gutters">
+                    <div class="col-12">
+                      <p class="font-weight-bold">
+                        Exchange
+                      </p>
+                    </div>
+                    <div class="row">
+                      <div class="col-6">
+                        <img class="w-100" src="images/collectionOfMovements/exchange-text.png"
+                             alt="">
+                      </div>
+                      <div class="col-6">
+                        <img class="w-100"
+                             src="images/collectionOfMovements/exchange-infographic.png" alt="">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 timeline-video video-player">
+                  <iframe data-target="timeline-exchange" class="timeline-video"
+                          src="https://player.vimeo.com/video/428981366" width="640" height="480"
+                          frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12 position-relative timeline-display">
+                  <div class="w-100 h-100 timeline-container">
+                    <div id="timeline-exchange" class="time"></div>
+                    <img class="w-100" src="images/collectionOfMovements/exchange.png" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+        </section>
+      </main>
       </div>
-    </header>
-    <main class="card">
-      <section id="movie">
-        <iframe src="https://player.vimeo.com/video/428854833" width="960" height="540" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-      </section>
-      <!-- GOAL -->
-      <section id="goal" class="goal pt-4 bg-color-change">
-
-        <div id="goal-text" class="bmnn-grid">
-          <div class="bmnn-row">
-            <div class="bmnn-col-2">
-              <p class="font-weight-bold" id="goal-title">
-                An exploration of the body-mind relationship
-              </p>
-              <p>
-                The separate sense of self is an illusion created by language. While language
-                defines
-                things
-                by separating them from their context, we exist through our context. We can exist
-                without
-                the definition we give ourselves through language, but we can’t exist without the
-                relationship
-                between our body, our mind and our surroundings.
-              </p>
-            </div>
-          </div>
-          <div class="bmnn-row">
-            <div id="comic1" class="bmnn-col-1 bmnn-col-offset-0">
-              <img src="images/goalComics/manifestComicsAsset1.png" alt="Flow State goal" class="w-100 mb-4" />
-            </div>
-          </div>
-          <div class="bmnn-row">
-            <div id="comic2" class="bmnn-col-1 bmnn-col-offset-2">
-              <img src="images/goalComics/manifestComicsAsset2.png" alt="Flow State goal" class="w-100 mb-4" />
-            </div>
-          </div>
-          <div class="bmnn-row">
-            <p class="bmnn-col-2 bmnn-col-offset-2">
-              Language isn’t fit to explain everything, but it is the best way to communicate.
-            </p>
-          </div>
-          <div class="bmnn-row">
-            <div id="comic3" class="bmnn-col-1 bmnn-col-offset-1">
-              <img src="images/goalComics/manifestComicsAsset3.png" alt="Flow State goal" class="w-100 mb-4" />
-            </div>
-          </div>
-          <div class="bmnn-row">
-            <div id="comic4" class="bmnn-col-1 bmnn-col-offset-3">
-              <img src="images/goalComics/manifestComicsAsset4.png" alt="Flow State goal" class="w-100 mb-4" />
-            </div>
-          </div>
-          <div class="bmnn-row">
-            <p class="bmnn-col-2 bmnn-col-offset-2">
-              As a rational being I want to understand the relationship between body, mind and
-              surroundings.
-              As a social being I want to discuss it and share my knowledge. Even though we can
-              never understand
-              it through language alone.
-            </p>
-          </div>
-          <div id="text4" class="bmnn-row">
-            <p class="bmnn-col-2 bmnn-col-offset-0">
-              To discuss the relationship between body, mind and surroundings design becomes
-              the complimentary part to language. With Flow State I start this discussion.
-            </p>
-          </div>
-          <div class="bmnn-row">
-            <div id="comic5" class="bmnn-col-2 bmnn-col-offset-0">
-              <img src="images/goalComics/manifestComicsAsset5.png" alt="Flow State goal" class="w-100 mb-4" />
-            </div>
-          </div>
-          <div class="bmnn-row">
-            <div id="comic6" class="bmnn-col-2 bmnn-col-offset-2">
-              <img src="images/goalComics/manifestComicsAsset6.png" alt="Flow State goal" class="w-100 mb-4" />
-            </div>
-          </div>
-          <div id="text5" class="bmnn-row">
-            <p class="bmnn-col-2 bmnn-col-offset-2">
-              Let's explore the body-mind relationship together
-              and use design as our primary way of communicating.
-            </p>
-          </div>
-          <div class="bmnn-row">
-            <p id="text6" class="bmnn-col-2 bmnn-col-offset-1">
-              Want to see me struggle to explain the body-mind relationship in words?
-              Request acces to my thesis by sending me an email: milaluna.baumann@gmail.com
-            </p>
-          </div>
-
-        </div>
-      </section>
-
-      <!-- Collection of movements -->
-      <section id="collection-of-movements" class="collection-of-movements pt-4 bmnn-grid">
-        <div class="bmnn-row">
-          <div class="bmnn-col-2 bmnn-col-offset-0">
-            <p class="font-weight-bold" id="goal-title"> Collection of Movements: A research becomes
-              a method
-            </p>
-            <p>
-              My journey starts with my personal experiences in circus training.
-              There I first encounter a state where my body, mind and surroundings seem to become
-              separate characters. Instead of me being the one that thinks, or the one that moves,
-              I was the place where the three of them came together. Partly leading their
-              interaction with each other and partly following their flow.
-            </p>
-            <p>
-              In my research I look to create a similar experience. As a result I made the
-              Collection
-              of Movements. A method that allows you to make endless connections between movements
-              of
-              the body, movements of my installation and different points in space. The resulting
-              behaviour makes the installation come alive.
-            </p>
-          </div>
-        </div>
-        <article id="alive">
-          <div class="bmnn-row">
-            <div class="bmnn-col-1">
-              <img class="w-100" src="images/collectionOfMovements/alive-text.png" alt="">
-            </div>
-            <div class="bmnn-col-1">
-              <img class="w-100" src="images/collectionOfMovements/alive-infographic.png" alt="">
-            </div>
-            <div class="timeline-video video-player bmnn-col-2">
-              <iframe src="https://player.vimeo.com/video/429047717" width="640" height="480" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-            </div>
-          </div>
-          <div class="bmnn-row">
-            <div class="bmnn-col-4 px-5 position-relative timeline-display">
-              <div class="w-100 h-100 timeline-container">
-                <div class="time"></div>
-                <img class="w-100" src="images/collectionOfMovements/alive-timeline.png" alt="">
-              </div>
-            </div>
-          </div>
-        </article>
-        <article id="flying-higher-and-higher">
-          <div class="bmnn-row">
-            <div class="bmnn-col-1">
-              <img src="images/collectionOfMovements/flying-text.png" alt="">
-            </div>
-            <div class="bmnn-col-1">
-              <img src="images/collectionOfMovements/flying-infographic.png" alt="">
-            </div>
-            <div class="bmnn-col-2 timeline-video video-player">
-              <iframe src="https://player.vimeo.com/video/428962181" width="640" height="480" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-            </div>
-          </div>
-          <div class="bmnn-row">
-            <div class="bmnn-col-4 w-100 px-5 position-relative timeline-display">
-              <div class="w-100 h-100 timeline-container">
-                <div class="time"></div>
-                <img class="w-100" src="images/collectionOfMovements/mages/collectionOfMovements/flying-timeline.png" alt="">
-              </div>
-            </div>
-          </div>
-        </article>
-        <article id="exchange">
-          <div class="bmnn-row">
-            <div class="bmnn-col-1 ">
-              <img src="images/collectionOfMovements/exchange-text.png" alt="">
-            </div>
-            <div class="bmnn-col-1 ">
-              <img src="images/collectionOfMovements/exchange-infographic.png" alt="">
-            </div>
-            <div class="bmnn-col-2 bmnn-col-offset-2 timeline-video video-player">
-              <iframe src="https://player.vimeo.com/video/428981366" width="640" height="480" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-            </div>
-          </div>
-          <div class="bmnn-row">
-            <div class="w-100 px-5 position-relative timeline-display">
-              <div class="w-100 h-100 timeline-container">
-                <div class="time"></div>
-                <img class="w-100" src="images/collectionOfMovements/exchange.png" alt="">
-              </div>
-            </div>
-          </div>
-        </article>
-        <div class="bmnn-row">
-          <div class="bmnn-col-1">
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam facilis dignissimos
-              exercitationem nulla, cumque quo ducimus incidunt ut reiciendis dolorem quam
-              laboriosam delectus provident quia vitae suscipit ex veritatis! Blanditiis fugit
-              est, cum sapiente itaque magnam neque quas repellat suscipit maiores dolorem
-              incidunt commodi voluptates quis doloribus, exercitationem aut inventore explicabo
-              sed nihil veritatis consequuntur a eveniet veniam. Nulla mollitia eaque dolore est
-              provident alias dolorum id vel laboriosam dolores. Maiores officia ipsum soluta
-              veritatis repudiandae iusto culpa esse quos neque quia totam voluptates perferendis
-              magnam natus accusamus quis fugit, praesentium error consectetur! Qui obcaecati
-              deserunt, quisquam natus ducimus consectetur.</p>
-          </div>
-          <div class="bmnn-col-1">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt a doloribus sed
-              inventore tempora dicta aliquam ab quia quasi iste. </p>
-          </div>
-          <div class="bmnn-col-2">
-            <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi quidem officia rem
-              vel, quae expedita optio consequuntur reprehenderit pariatur officiis! Ducimus sint
-              facere repellendus. Ipsam dicta rerum at cupiditate voluptatibus, eius fugit quae
-              nam cum repellendus ipsa ducimus maxime facere excepturi? Necessitatibus facilis
-              accusamus modi asperiores.
-            </p>
-          </div>
-        </div>
-      </section>
-    </main>
-  </div>
-</body>
+  </body>
 
 </html>
