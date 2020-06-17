@@ -9,21 +9,24 @@ $(document).ready(() => {
   });
 
   //sync vimeo video play with timeline animation
-  const flyinghHigherAndHigher = new TimeLinePlayer('flying-higher-and-higher');
-  const exchange = new TimeLinePlayer('exchange');
-  const alive = new TimeLinePlayer('alive');
+  const vimeoVideos = $('.timeline-video').each(function () {
+    if ($(this).attr('data-target')) {
+      console.log(`targetting ${$(this).attr('data-target')}`);
+      new TimeLinePlayer($(this).attr('data-target'), $(this)[0]);
+    }
+  });
 });
 
 class TimeLinePlayer {
-  constructor(target) {
-    if (!target) throw new Error('Invalid class!', target);
-    this.target = $(`#${target}>.timeline-display>.timeline-container>.time`);
-    this.player = new Vimeo.Player(document.querySelector(`#${target}>.timeline-video>iframe`));
+  constructor(timelineImage, vimeoPlayer) {
+    if (!timelineImage) throw new Error('Invalid class!', timelineImage);
+    this.target = $(`#${timelineImage}`);
+    this.player = new Vimeo.Player(vimeoPlayer);
     this.link();
   }
 
   link() {
-    this.player.on('play', (event) => {
+    this.player.on('play', event => {
       console.log('played the video!', event);
       console.log('duration', event.duration);
       if (this.target.css('animation-name') === 'timeline-animation') {
@@ -36,10 +39,12 @@ class TimeLinePlayer {
       }
     });
 
-    this.player.on('pause', () => this.target.css('animation-play-state', 'paused'));
+    this.player.on('pause', () =>
+      this.target.css('animation-play-state', 'paused')
+    );
 
     this.player.on('ended', () => this.target.css('animation-name', 'none'));
 
-    this.player.getVideoTitle().then((title) => console.log('title:', title));
+    this.player.getVideoTitle().then(title => console.log('title:', title));
   }
 }
