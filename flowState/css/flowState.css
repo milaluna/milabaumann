@@ -119,8 +119,15 @@ main p {
   min-height: 100vh;
 }
 
+.movement {
+  margin-top: 20vh;
+}
+
 .timeline-container {
   position: relative;
+  height: 160px;
+  display: flex;
+  align-items: center;
 }
 
 .timeline-container > .time {
