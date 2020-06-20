@@ -1,4 +1,8 @@
 $(document).ready(() => {
+  const ratio = 960 / 540;
+  const videoWidth = window.innerWidth;
+  const videoHeight = videoWidth / ratio;
+  $('#main-movie').css('width', videoWidth).css('height', videoHeight);
   // initilises the coursel with the slick library
   $('.movie-caroussel').slick({
     infinite: true,
@@ -14,6 +18,34 @@ $(document).ready(() => {
       console.log(`targetting ${$(this).attr('data-target')}`);
       new TimeLinePlayer($(this).attr('data-target'), $(this)[0]);
     }
+  });
+
+  function opacityFunction() {
+    const scrollTop = $(document).scrollTop();
+    const offsetTop = $(this).offset().top - scrollTop;
+
+    const start = (window.innerHeight * 4) / 8;
+    const stop = (window.innerHeight * 3) / 8;
+    const diff = start - stop;
+
+    if (offsetTop > start) return 0;
+    if (offsetTop < stop) return 1;
+
+    const heightDiff = offsetTop - stop;
+    return 1 - heightDiff / diff;
+  }
+
+  //scroll opacity
+  $(document).scroll(function () {
+    const scrollTop = $(this).scrollTop();
+    const goalText = $('#goal');
+    const collectionOfMovements = $('#collection-of-movements');
+    goalText.css({
+      opacity: opacityFunction.bind(goalText)
+    });
+    collectionOfMovements.css({
+      opacity: opacityFunction.bind(collectionOfMovements)
+    });
   });
 });
 
