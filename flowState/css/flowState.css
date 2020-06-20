@@ -24,6 +24,7 @@ body {
 /* Introduction */
 .introduction {
   height: 100vh;
+  background-color: #ccc;
 }
 
 .teaser {
