@@ -1,6 +1,6 @@
 $(document).ready(() => {
   const ratio = 960 / 540;
-  const videoWidth = window.innerWidth;
+  const videoWidth = window.innerWidth * 0.75;
   const videoHeight = videoWidth / ratio;
   $('#main-movie').css('width', videoWidth).css('height', videoHeight);
   // initilises the coursel with the slick library
