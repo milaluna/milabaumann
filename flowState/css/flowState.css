@@ -67,7 +67,12 @@ main p {
 }
 /* movie end */
 #comic1 {
-  margin-bottom: 40vh;
+  margin-top   : 5vh;
+  margin-bottom: 20vh;
+}
+
+#comic2 {
+  margin-bottom: 2vh;
 }
 
 #comic3 {
@@ -75,7 +80,8 @@ main p {
 }
 
 #comic4 {
-  margin-top: 60vh;
+  margin-top   : 60vh;
+  margin-bottom: 2vh;
 }
 
 #text4 {
@@ -83,13 +89,11 @@ main p {
 }
 
 #comic5 {
-  margin-top   : 20vh;
+  margin-top   : 5vh;
   margin-bottom: 20vh;
 }
 
-#comic6 {
-  margin-bottom: 20vh;
-}
+#comic6 {}
 
 #text5 {
   margin-bottom: 80vh;
