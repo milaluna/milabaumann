@@ -229,7 +229,7 @@ html {
   display     : block;
   text-align  : center;
   padding     : 2vh;
-  font-size   : 1.6em;
+  font-size   : 1em;
   padding-left: 180px;
 }
 @media screen and (max-width: 992px) {
@@ -289,7 +289,7 @@ html {
   .project {
     width: 100%;
   }
-
+  /* Footer is mentioned before ??*/
   .footer {
     padding-left: 0;
   }
