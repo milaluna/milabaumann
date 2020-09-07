@@ -1,28 +1,28 @@
 body {
-  margin     : 0;
-  padding    : 0;
-  box-sizing : border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   font-family: 'Open Sans', sans-serif;
-  font-size  : 14px;
+  font-size: 14px;
   font-weight: 300;
 }
 
 .card-container {
-  display       : flex;
-  flex-wrap     : wrap;
+  display: flex;
+  flex-wrap: wrap;
   padding-bottom: 4rem;
-  position      : relative;
+  position: relative;
 }
 
 .card-bmnn {
-  position        : sticky;
-  top             : 0;
-  overflow        : hidden;
+  position: sticky;
+  top: 0;
+  overflow: hidden;
   background-color: white;
 }
 /* Introduction */
 .introduction {
-  height          : 100vh;
+  height: 100vh;
   background-color: #f1b63a;
 }
 
@@ -32,42 +32,50 @@ body {
 
 .title {
   text-transform: capitalize;
-  font-weight   : bold;
-  font-size     : 6.5em;
-  text-align    : left;
+  font-weight: bold;
+  font-size: 6.5em;
+  text-align: left;
 }
 
 .subtitle {
   font-weight: bold;
-  font-style : italic;
-  font-size  : 2em;
-  text-align : left;
-  position   : relative;
-  left       : 13em;
+  font-style: italic;
+  font-size: 2em;
+  text-align: left;
+  position: relative;
+  left: 13em;
 }
 /* Introduction end */
 main p {
-  font-size : 1.3em;
+  font-size: 1.3em;
   text-align: left;
 }
 
 .gray-divisor {
-  width           : 100%;
-  height          : 240px;
-  background-image: linear-gradient(to bottom, #fff 0%, #fff 25%, #bbb, #888, #444, #000);
-  border          : none;
+  width: 100%;
+  height: 240px;
+  background-image: linear-gradient(
+    to bottom,
+    #fff 0%,
+    #fff 25%,
+    #bbb,
+    #888,
+    #444,
+    #000
+  );
+  border: none;
 }
 /* movie */
 #movie {
-  min-height     : 100vh;
-  display        : flex;
+  min-height: 100vh;
+  display: flex;
   justify-content: center;
-  align-items    : center;
-  margin-bottom  : 10vh;
+  align-items: center;
+  margin-bottom: 10vh;
 }
 /* movie end */
 #comic1 {
-  margin-top   : 5vh;
+  margin-top: 5vh;
   margin-bottom: 20vh;
 }
 
@@ -80,7 +88,7 @@ main p {
 }
 
 #comic4 {
-  margin-top   : 60vh;
+  margin-top: 60vh;
   margin-bottom: 2vh;
 }
 
@@ -89,11 +97,9 @@ main p {
 }
 
 #comic5 {
-  margin-top   : 5vh;
+  margin-top: 5vh;
   margin-bottom: 20vh;
 }
-
-#comic6 {}
 
 #text5 {
   margin-bottom: 80vh;
@@ -123,25 +129,25 @@ main p {
 }
 
 .timeline-display {
-  margin-top   : 10vh;
+  margin-top: 10vh;
   margin-bottom: 20vh;
 }
 
 .timeline-container {
-  position   : relative;
-  height     : 160px;
-  display    : flex;
+  position: relative;
+  height: 160px;
+  display: flex;
   align-items: center;
 }
 
 .timeline-container > .time {
-  position    : absolute;
-  top         : 0;
-  left        : 0;
-  width       : 100%;
-  height      : 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   border-right: 3px solid black;
-  opacity     : 0;
+  opacity: 0;
 }
 
 .timeline-container > img {
@@ -153,32 +159,33 @@ main p {
 }
 
 .content-wrapper {
-  min-height    : 100vh;
-  position      : relative;
+  min-height: 100vh;
+  position: relative;
   padding-bottom: 4rem;
 }
 
 footer {
-  position  : absolute;
-  bottom    : 0;
-  height    : 4rem;
-  width     : 100%;
+  position: absolute;
+  bottom: 0;
+  height: 4rem;
+  width: 100%;
   text-align: center;
 }
 @keyframes timeline-animation {
   from {
     will-change: transform, opacity;
-    opacity    : 1;
-    transform  : translateX(-100%);
+    opacity: 1;
+    transform: translateX(-100%);
   }
 
   to {
     will-change: unset;
-    opacity    : 1;
-    transform  : translateX(0);
+    opacity: 1;
+    transform: translateX(0);
   }
 }
 /* Collection of movements end */
+
 @media only screen and (max-width: 992px) {
   body {
     font-size: 24px;
@@ -189,7 +196,17 @@ footer {
   }
 
   main p {
-    font-size : 1.8em;
+    font-size: 1.8em;
     text-align: left;
+  }
+
+  #movie {
+    min-height: 0;
+    margin: 5vh auto;
+  }
+
+  #comic5 > img,
+  #comic6 > img {
+    transform: scale(1);
   }
 }
