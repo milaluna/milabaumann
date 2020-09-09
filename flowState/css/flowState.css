@@ -18,6 +18,9 @@ body {
   position: sticky;
   top: 0;
   overflow: hidden;
+}
+
+.bg-white {
   background-color: white;
 }
 /* Introduction */
@@ -155,7 +158,9 @@ main p {
 }
 
 .video-player {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .content-wrapper {
@@ -193,6 +198,13 @@ footer {
 
   .subtitle {
     left: 0;
+  }
+
+  .card-bmnn {
+    position: relative;
+  }
+  main {
+    text-align: center;
   }
 
   main p {
