@@ -9,6 +9,10 @@ html {
   font-family    : sans-serif;
 }
 
+#aboutText {
+  margin-left: 5vh;
+}
+
 .invisible-link {
   text-decoration: none;
   color          : inherit;
