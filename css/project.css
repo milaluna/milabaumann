@@ -33,11 +33,11 @@
 }
 
 .main-text {
-  width       : 50%;
-  padding-top : 0;
-  font-size   : 1.1rem;
-  padding-left: 5vh;
-  padding-top : -5px;
+  width        : 50%;
+  padding-top  : 0;
+  font-size    : 1.1rem;
+  padding-right: 5vh;
+  padding-top  : -5px;
 }
 
 .carousel-caption {
@@ -65,12 +65,11 @@
   .project-description {}
 
   .image {
-    width  : 100%;
-    padding: 0 5vh;
+    width: 100%;
   }
 
   .main-text {
-    width  : 100%;
-    padding: 5vh;
+    width        : 100%;
+    padding-right: 0;
   }
 }

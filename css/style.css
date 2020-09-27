@@ -19,7 +19,17 @@ html {
 }
 
 .invisible-link:hover {
-  text-decoration: none;
+  text-decoration: inherit;
+  color          : rgb(175, 148, 5);
+}
+
+.visible-link {
+  text-decoration: underline;
+  color          : inherit;
+}
+
+.visible-link:hover {
+  text-decoration: inherit;
   color          : rgb(175, 148, 5);
 }
 
@@ -28,11 +38,13 @@ html {
 }
 
 .object-position-bottom {
-  object-position: bottom;
+  -o-object-position: bottom;
+  object-position   : bottom;
 }
 
 .object-position-left {
-  object-position: left;
+  -o-object-position: left;
+  object-position   : left;
 }
 
 .menu {
@@ -118,6 +130,7 @@ html {
 .quote {
   font-size : 1.1rem;
   font-style: italic;
+  padding   : 0.2rem;
 }
 
 .text {
@@ -225,6 +238,33 @@ html {
   max-height: 100%;
   margin    : auto;
   padding   : auto;
+}
+
+.bg-flow-state {
+  background-color: #f1b63a;
+}
+
+.see-more {
+  width   : 8rem;
+  position: relative;
+}
+
+.see-more > span {
+  position: relative;
+  left    : -8px;
+}
+
+.see-more::after {
+  content           : "→";
+  position          : absolute;
+  right             : 13px;
+  -webkit-transition: 0.2s all ease-in-out;
+  transition        : 0.2s all ease-in-out;
+}
+
+.see-more:hover::after {
+  -webkit-transform: translateX(5px);
+  transform        : translateX(5px);
 }
 
 .footer {
