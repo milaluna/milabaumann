@@ -29,15 +29,16 @@
 }
 
 .image {
-  width: 50%;
+  width        : 50%;
+  padding-right: 2.5vh;
 }
 
 .main-text {
-  width        : 50%;
-  padding-top  : 0;
-  font-size    : 1.1rem;
-  padding-right: 5vh;
-  padding-top  : -5px;
+  width       : 50%;
+  padding-top : 0;
+  font-size   : 1.1rem;
+  padding-left: 2.5vh;
+  padding-top : -5px;
 }
 
 .carousel-caption {
