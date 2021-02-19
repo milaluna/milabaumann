@@ -52,6 +52,10 @@ html {
   object-position   : right;
 }
 
+.object-fit-cover {
+  object-fit: cover;
+}
+
 .menu {
   border-right       : 1px solid lightgrey;
   background-color   : #e6e6e6;
