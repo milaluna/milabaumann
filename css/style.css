@@ -47,6 +47,11 @@ html {
   object-position   : left;
 }
 
+.object-position-right {
+  -o-object-position: right;
+  object-position   : right;
+}
+
 .menu {
   border-right       : 1px solid lightgrey;
   background-color   : #e6e6e6;
