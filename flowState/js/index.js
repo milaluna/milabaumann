@@ -7,7 +7,6 @@ $(document).ready(() => {
   //sync vimeo video play with timeline animation
   const vimeoVideos = $('.timeline-video').each(function () {
     if ($(this).attr('data-target')) {
-      console.log(`targetting ${$(this).attr('data-target')}`);
       new TimeLinePlayer($(this).attr('data-target'), $(this)[0]);
     }
 
@@ -73,25 +72,18 @@ class TimeLinePlayer {
   }
 
   link() {
-    this.player.on('play', event => {
-      console.log('played the video!', event);
-      console.log('duration', event.duration);
-      if (this.target.css('animation-name') === 'timeline-animation') {
-        this.target.css('animation-play-state', 'running');
-      } else {
-        this.target.css('animation-name', 'timeline-animation');
-        this.target.css('animation-duration', `${event.duration}s`);
-        this.target.css('animation-timing-function', 'linear');
-        this.target.css('animation-play-state', 'running');
+    this.player.on('play', (event) => {
+      if (event) {
+        const percent = event.percent * 100;
+        this.target.css('transform', `translateX(${percent - 100}%)`);
       }
+      this.target.css('transition', 'transform 0.25s linear');
     });
 
-    this.player.on('pause', () =>
-      this.target.css('animation-play-state', 'paused')
-    );
-
-    this.player.on('ended', () => this.target.css('animation-name', 'none'));
-
-    this.player.getVideoTitle().then(title => console.log('title:', title));
+    this.player.on('timeupdate', (event) => {
+      this.target.css('opacity', '1');
+      const percent = event.percent * 100;
+      this.target.css('transform', `translateX(${percent - 100}%)`);
+    });
   }
 }
